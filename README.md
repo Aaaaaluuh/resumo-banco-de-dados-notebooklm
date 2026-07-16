@@ -46,7 +46,7 @@ As fontes passaram a abranger assuntos como:
 - *[Introdução a Modelagem de Dados](https://www.cin.ufpe.br/~rrbs/pronatec/Introdução%20a%20Modelagem%20de%20Dados.pdf)*
 - *[Fundamentos de Banco de Dados](https://professor.ufop.br/sites/default/files/george/files/2020-2_apostila_cdd003.pdf)*
 - *[Capítulo 3 do "Data Warehouse Toolkit"](http://wiki.icmc.usp.br/images/0/00/SCC0245_capitulo3.pdf)*
-- *[Modelação de um Data Warehouse]([Inserir links](https://run.unl.pt/bitstream/10362/5366/1/TEGI0271.pdf))*
+- *[Modelação de um Data Warehouse](https://run.unl.pt/bitstream/10362/5366/1/TEGI0271.pdf)*
 - *[Sistemas de Banco de Dados de Elmasri e Navathe)](https://www.kufunda.net/publicdocs/Sistemas%20de%20Banco%20de%20Dados%20(Ramez%20Elmasri,%20Shamkant%20B.%20Navathe).pdf)*
 - *[Armazenamento de Big Data: Uma Abordagem Didática](https://fatece.edu.br/arquivos/arquivos-revistas/perspectiva/volume8/Dayse%20Silveira%20de%20Almeida;%20Danilo%20Borges%20Dutra.pdf)*
 
