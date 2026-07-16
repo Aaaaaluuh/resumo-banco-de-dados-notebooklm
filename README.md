@@ -42,11 +42,13 @@ As fontes passaram a abranger assuntos como:
 
 ### Fontes utilizadas
 
-- *(Inserir links dos PDFs ou documentos utilizados)*
-- *(Inserir links)*
-- *(Inserir links)*
-- *(Inserir links)*
-- *(Inserir links)*
+- *[Introdução a Banco de Dados](https://www.ime.usp.br/~jef/apostila.pdf)*
+- *[Introdução a Modelagem de Dados](https://www.cin.ufpe.br/~rrbs/pronatec/Introdução%20a%20Modelagem%20de%20Dados.pdf)*
+- *[Fundamentos de Banco de Dados](https://professor.ufop.br/sites/default/files/george/files/2020-2_apostila_cdd003.pdf)*
+- *[Capítulo 3 do "Data Warehouse Toolkit"](http://wiki.icmc.usp.br/images/0/00/SCC0245_capitulo3.pdf)*
+- *[Modelação de um Data Warehouse]([Inserir links](https://run.unl.pt/bitstream/10362/5366/1/TEGI0271.pdf))*
+- *[Sistemas de Banco de Dados de Elmasri e Navathe)](https://www.kufunda.net/publicdocs/Sistemas%20de%20Banco%20de%20Dados%20(Ramez%20Elmasri,%20Shamkant%20B.%20Navathe).pdf)*
+- *[Armazenamento de Big Data: Uma Abordagem Didática](https://fatece.edu.br/arquivos/arquivos-revistas/perspectiva/volume8/Dayse%20Silveira%20de%20Almeida;%20Danilo%20Borges%20Dutra.pdf)*
 
 ---
 
@@ -58,7 +60,7 @@ Após adicionar as fontes iniciais, foi solicitado ao NotebookLM que produzisse 
 
 ### Prompt
 
-> Produza um relatório completo sobre Banco de Dados utilizando todas as fontes disponíveis.
+> Produza um relatório completo sobre Banco de Dados utilizando todas as fontes disponíveis e seguindo o conteúdo programático a seguir: (conteúdo programático colado).
 
 ### Resultado
 
@@ -66,31 +68,11 @@ O relatório apresentou uma boa organização, porém ficou superficial para o o
 
 ---
 
-## Segunda abordagem
+## Segunda abordagem (Refinamento)
 
 Em vez de continuar utilizando apenas as fontes inicialmente selecionadas, foi utilizado o conteúdo programático do edital como guia para expandir automaticamente a base de documentos do NotebookLM.
 
-### Resultado
-
-O número de fontes aumentou significativamente, cobrindo praticamente todos os tópicos previstos no edital utilizado como referência.
-
----
-
-## Terceira abordagem
-
-Com o conjunto ampliado de fontes, foi solicitado um novo relatório geral.
-
-### Resultado
-
-Mesmo com uma quantidade maior de documentos, o relatório permaneceu relativamente resumido.
-
-Isso levou à hipótese de que o NotebookLM possui um limite prático para o tamanho dos relatórios gerados.
-
----
-
-## Quarta abordagem (Refinamento)
-
-Foi elaborado um prompt muito mais detalhado, instruindo o NotebookLM a atuar como um professor especialista em concursos públicos.
+Após a ampliação no repertório, foi elaborado um prompt muito mais detalhado, instruindo o NotebookLM a atuar como um professor especialista em concursos públicos.
 
 Entre as principais instruções estavam:
 
@@ -103,11 +85,18 @@ Entre as principais instruções estavam:
 - criar questões comentadas;
 - evitar resumos excessivos.
 
-Mesmo com essas orientações, o relatório geral continuou limitado em profundidade.
+
+### Resultado
+
+O número de fontes aumentou significativamente, cobrindo praticamente todos os tópicos previstos no edital utilizado como referência.
+
+Mesmo com uma quantidade maior de documentos, o relatório permaneceu relativamente resumido.
+
+Isso levou à hipótese de que o NotebookLM possui um limite prático para o tamanho dos relatórios gerados.
 
 ---
 
-## Quinta abordagem (Solução adotada)
+## Terceira abordagem (Solução adotada)
 
 Como estratégia para contornar a limitação observada, o conteúdo programático foi dividido em módulos.
 
@@ -122,6 +111,75 @@ A estrutura adotada foi:
 - Módulo 5 — Big Data e Data Lakes.
 
 Na prática, cada relatório passou a representar um capítulo da apostila construída a partir do conteúdo programático do edital.
+
+### Prompt
+
+> Você é um professor renomado especializado na preparação para concursos públicos de TI, com foco na banca FGV.
+Seu objetivo é produzir uma apostila completa e aprofundada sobre os assuntos informados, suficiente para que o aluno consiga resolver questões de concurso com segurança. Se o conteúdo for extenso, divida-o em quantas partes forem necessárias. Nunca reduza a profundidade para caber em uma única resposta.
+Escreva como um excelente professor presencial: linguagem clara, didática e progressiva. Não economize explicações nem faça resumos excessivos. Explique do básico ao avançado, sem assumir conhecimentos prévios além do que já foi apresentado anteriormente e o listado neste prompt.
+
+Sempre apresente o significado das siglas antes de utilizá-las e explique cada termo técnico antes de empregá-lo.
+Sempre que apresentar uma tecnologia, protocolo, comando, mecanismo, ferramenta ou conceito, responda:
+
+O que é;
+Por que surgiu;
+Qual problema resolve;
+Como funciona internamente;
+Quando é utilizado;
+Como costuma ser cobrado pela FGV;
+Quais são as pegadinhas mais frequentes.
+
+Sempre que pertinente, inclua:
+
+contexto histórico;
+funcionamento interno;
+exemplos práticos;
+analogias apenas quando realmente facilitarem o entendimento;
+diferenças entre conceitos semelhantes;
+vantagens, desvantagens e limitações.
+
+Dê preferência a explicações em texto corrido, conectando as ideias. Evite listas fragmentadas quando uma explicação contínua for mais didática.
+
+Destaque explicitamente:
+
+pegadinhas clássicas de concursos;
+erros conceituais explorados pela FGV;
+diferenças entre conceitos parecidos;
+motivos pelos quais alternativas incorretas estariam erradas.
+
+Ao final de cada parte, apresente obrigatoriamente:
+
+resumo dos pontos mais importantes;
+questões inéditas no estilo FGV;
+comentários detalhados justificando cada alternativa correta e incorreta.
+
+Conteúdo programático já dado:
+
+MÓDULO 1 – Fundamentos e Modelagem de Dados
+1.1 Modelagem de dados (conceitual, lógica e física) 
+1.2 Abordagem relacional 
+1.3 Normalização das estruturas de dados 
+1.4 Integridade referencial 
+1.5 Metadados 
+MÓDULO 2 – Modelagem Dimensional (Foco em BI — direto ligado ao perfil "Inteligência da Informação")
+2.1 Modelagem dimensional — Item 6
+MÓDULO 3 – Linguagens de Banco de Dados (SQL)
+3.1 Linguagem de consulta estruturada (SQL) 
+3.2 Linguagem de definição de dados (DDL)
+3.3 Linguagem de manipulação de dados (DML) 
+MÓDULO 4 – SGBD, Propriedades e Novos Modelos
+4.1 SGBD 
+4.2 Propriedades de banco de dados
+4.3 Banco de dados NoSQL 
+4.4 Banco de dados em memória 
+
+Conteúdo desta apostila:
+MÓDULO 5 – Big Data e Data Lakes
+5.1 Data lakes e soluções para big data
+Data Lake x Data Warehouse (diferenças de estrutura, schema-on-read x schema-on-write)
+Os "V"s do Big Data (Volume, Velocidade, Variedade, Veracidade, Valor)
+Ferramentas típicas de ecossistema Big Data (Hadoop, HDFS, Spark — bom ter noção geral mesmo não estando explícito no edital)
+Conceito de Data Lakehouse (tendência atual que une DW + Data Lake)
 
 ---
 
