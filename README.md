@@ -8,7 +8,7 @@ O objetivo foi utilizar o NotebookLM como ferramenta de aprendizagem ativa para 
 
 Ao longo do desenvolvimento, foi possível identificar limitações na geração de relatórios do NotebookLM. Por isso, diferentes estratégias de engenharia de prompts foram aplicadas para obter materiais cada vez mais completos e úteis para os estudos.
 
-##*[Link do Notebook](https://notebooklm.google.com/notebook/ee8d1ac6-5307-4988-9b37-63a5a6b55fe3)*
+*[Link do Notebook](https://notebooklm.google.com/notebook/ee8d1ac6-5307-4988-9b37-63a5a6b55fe3)*
 
 ---
 
