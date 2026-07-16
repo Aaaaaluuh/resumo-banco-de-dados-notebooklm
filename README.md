@@ -56,11 +56,7 @@ As fontes passaram a abranger assuntos como:
 
 ## Primeira abordagem
 
-Após adicionar as fontes iniciais, foi solicitado ao NotebookLM que produzisse um relatório completo sobre Banco de Dados.
-
-### Prompt
-
-> Produza um relatório completo sobre Banco de Dados utilizando todas as fontes disponíveis e seguindo o conteúdo programático a seguir: (conteúdo programático colado).
+Após adicionar as fontes iniciais, foi solicitado ao NotebookLM que produzisse um relatório completo sobre Banco de Dados./ com um prompt simples, que citava todo o conteúdo programático.
 
 ### Resultado
 
@@ -70,7 +66,7 @@ O relatório apresentou uma boa organização, porém ficou superficial para o o
 
 ## Segunda abordagem (Refinamento)
 
-Em vez de continuar utilizando apenas as fontes inicialmente selecionadas, foi utilizado o conteúdo programático do edital como guia para expandir automaticamente a base de documentos do NotebookLM.
+Em vez de continuar utilizando apenas as fontes inicialmente selecionadas, foi utilizado o conteúdo programático do edital como guia para expandir automaticamente a base de documentos do NotebookLM, utilizando a ferramenta de Deep Search.
 
 Após a ampliação no repertório, foi elaborado um prompt muito mais detalhado, instruindo o NotebookLM a atuar como um professor especialista em concursos públicos.
 
@@ -114,72 +110,60 @@ Na prática, cada relatório passou a representar um capítulo da apostila const
 
 ### Prompt
 
-> Você é um professor renomado especializado na preparação para concursos públicos de TI, com foco na banca FGV.
+## 🧠 Prompt utilizado
+
+```text
+Você é um professor renomado especializado na preparação para concursos públicos de TI, com foco na banca FGV.
+
 Seu objetivo é produzir uma apostila completa e aprofundada sobre os assuntos informados, suficiente para que o aluno consiga resolver questões de concurso com segurança. Se o conteúdo for extenso, divida-o em quantas partes forem necessárias. Nunca reduza a profundidade para caber em uma única resposta.
+
 Escreva como um excelente professor presencial: linguagem clara, didática e progressiva. Não economize explicações nem faça resumos excessivos. Explique do básico ao avançado, sem assumir conhecimentos prévios além do que já foi apresentado anteriormente e o listado neste prompt.
 
 Sempre apresente o significado das siglas antes de utilizá-las e explique cada termo técnico antes de empregá-lo.
+
 Sempre que apresentar uma tecnologia, protocolo, comando, mecanismo, ferramenta ou conceito, responda:
 
-O que é;
-Por que surgiu;
-Qual problema resolve;
-Como funciona internamente;
-Quando é utilizado;
-Como costuma ser cobrado pela FGV;
-Quais são as pegadinhas mais frequentes.
+- O que é;
+- Por que surgiu;
+- Qual problema resolve;
+- Como funciona internamente;
+- Quando é utilizado;
+- Como costuma ser cobrado pela FGV;
+- Quais são as pegadinhas mais frequentes.
 
 Sempre que pertinente, inclua:
 
-contexto histórico;
-funcionamento interno;
-exemplos práticos;
-analogias apenas quando realmente facilitarem o entendimento;
-diferenças entre conceitos semelhantes;
-vantagens, desvantagens e limitações.
+- contexto histórico;
+- funcionamento interno;
+- exemplos práticos;
+- analogias apenas quando realmente facilitarem o entendimento;
+- diferenças entre conceitos semelhantes;
+- vantagens, desvantagens e limitações.
 
 Dê preferência a explicações em texto corrido, conectando as ideias. Evite listas fragmentadas quando uma explicação contínua for mais didática.
 
 Destaque explicitamente:
 
-pegadinhas clássicas de concursos;
-erros conceituais explorados pela FGV;
-diferenças entre conceitos parecidos;
-motivos pelos quais alternativas incorretas estariam erradas.
+- pegadinhas clássicas de concursos;
+- erros conceituais explorados pela FGV;
+- diferenças entre conceitos parecidos;
+- motivos pelos quais alternativas incorretas estariam erradas.
 
 Ao final de cada parte, apresente obrigatoriamente:
 
-resumo dos pontos mais importantes;
-questões inéditas no estilo FGV;
-comentários detalhados justificando cada alternativa correta e incorreta.
+- resumo dos pontos mais importantes;
+- questões inéditas no estilo FGV;
+- comentários detalhados justificando cada alternativa correta e incorreta.
 
-Conteúdo programático já dado:
+Conteúdo programático já estudado:
 
-MÓDULO 1 – Fundamentos e Modelagem de Dados
-1.1 Modelagem de dados (conceitual, lógica e física) 
-1.2 Abordagem relacional 
-1.3 Normalização das estruturas de dados 
-1.4 Integridade referencial 
-1.5 Metadados 
-MÓDULO 2 – Modelagem Dimensional (Foco em BI — direto ligado ao perfil "Inteligência da Informação")
-2.1 Modelagem dimensional — Item 6
-MÓDULO 3 – Linguagens de Banco de Dados (SQL)
-3.1 Linguagem de consulta estruturada (SQL) 
-3.2 Linguagem de definição de dados (DDL)
-3.3 Linguagem de manipulação de dados (DML) 
-MÓDULO 4 – SGBD, Propriedades e Novos Modelos
-4.1 SGBD 
-4.2 Propriedades de banco de dados
-4.3 Banco de dados NoSQL 
-4.4 Banco de dados em memória 
+(conteúdo já estudado)
 
 Conteúdo desta apostila:
-MÓDULO 5 – Big Data e Data Lakes
-5.1 Data lakes e soluções para big data
-Data Lake x Data Warehouse (diferenças de estrutura, schema-on-read x schema-on-write)
-Os "V"s do Big Data (Volume, Velocidade, Variedade, Veracidade, Valor)
-Ferramentas típicas de ecossistema Big Data (Hadoop, HDFS, Spark — bom ter noção geral mesmo não estando explícito no edital)
-Conceito de Data Lakehouse (tendência atual que une DW + Data Lake)
+
+(conteúdo a ser estudado)
+
+```
 
 ---
 
@@ -205,11 +189,11 @@ Entretanto:
 - nenhuma questão real foi apresentada;
 - o documento consistia apenas em uma análise produzida pela IA.
 
-Apesar dessa limitação, o material foi mantido como complemento, acompanhado da ressalva de que não representa uma compilação de questões reais.
+Por conta da limitação, o material foi descartado, já que não representa uma compilação de questões reais e abrangeu mais conteúdo do que o abrangido pelo conteúdo programático alvo.
 
 ---
 
-# ⚠️ Troubleshooting (Lições Aprendidas)
+# ⚠️ Lições Aprendidas
 
 Durante o projeto foram observadas algumas limitações importantes:
 
@@ -235,7 +219,6 @@ O resultado final não foi apenas um relatório sobre Banco de Dados, mas uma ap
 - Apostila do Módulo 3;
 - Apostila do Módulo 4;
 - Apostila do Módulo 5;
-- Análise complementar produzida pelo Deep Search.
 
 ---
 
@@ -260,13 +243,7 @@ O resultado final não foi apenas um relatório sobre Banco de Dados, mas uma ap
 
 ## Criar apostila
 
-> Atue como um professor especialista em concursos públicos de TI da banca FGV e produza uma apostila completa sobre este assunto. Explique todos os conceitos do básico ao avançado, apresente exemplos, funcionamento interno, pegadinhas de prova e questões comentadas.
-
----
-
-## Revisão
-
-> Faça um resumo estruturado destacando os conceitos mais importantes deste módulo, enfatizando as relações entre os assuntos e os pontos de maior atenção para revisão.
+> Atue como um professor especialista em concursos públicos de TI da banca FGV e produza uma apostila completa sobre este assunto (colocar assunto). Explique todos os conceitos do básico ao avançado, apresente exemplos, funcionamento interno, pegadinhas de prova e questões comentadas.
 
 ---
 
@@ -282,11 +259,6 @@ O resultado final não foi apenas um relatório sobre Banco de Dados, mas uma ap
 
 ---
 
-## Revisão Final
-
-> Crie uma revisão completa deste conteúdo destacando os conceitos essenciais, erros conceituais frequentes e possíveis pegadinhas que podem aparecer em provas.
-
----
 
 # 💡 Considerações Finais
 
